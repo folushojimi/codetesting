@@ -1,6 +1,6 @@
 import Authform from "../auth/pages/Authform"
 
-const JustTesting =()=>{
+const Inputpage =()=>{
     return(
         <>
 <Authform
@@ -22,9 +22,12 @@ fields={[
   }
   
   ]}
+
+  submitButton="Signup or Signin"
+
 />
         </>
     )
 }
 
-export default JustTesting
+export default Inputpage

@@ -1,9 +1,10 @@
-import JustTesting from './justTesting'
+import Inputpage from "./inputpage"
+
 function App() {
   return (
    <>
 <div>
- <JustTesting/>
+  <Inputpage/>
 </div>
     </>
   
