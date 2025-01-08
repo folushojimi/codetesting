@@ -1,6 +1,6 @@
 import Authform from "../auth/pages/Authform"
 
-const Inputpage =()=>{
+const Signup =()=>{
     return(
         <>
 <Authform
@@ -12,9 +12,6 @@ fields={[
   {
     label:"Last Name", 
     type:"text"
-  },{
-    label:"Home Address", 
-    type:"text"
   },
   {
      label:"Password", 
@@ -23,11 +20,11 @@ fields={[
   
   ]}
 
-  submitButton="Signup or Signin"
+  submitButton="Signup"
 
 />
         </>
     )
 }
 
-export default Inputpage
+export default Signup

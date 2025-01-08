@@ -1,12 +1,9 @@
-import Inputpage from "./inputpage"
 
 function App() {
   return (
-   <>
-<div>
-  <Inputpage/>
-</div>
-    </>
+  <>
+
+  </>
   
   )
 }
