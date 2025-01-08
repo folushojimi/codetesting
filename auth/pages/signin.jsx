@@ -10,7 +10,7 @@ const Signin =()=>{
      fields={[
         {
         label:"Email",
-        type:"text"   
+        type:"email" 
         },
         {
         label:"Username",

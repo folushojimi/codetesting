@@ -1,20 +1,18 @@
 import { useState } from "react"
 
-const Authform = ({fields, submitButton})=>{
+const Authform = ({fields,submitButton})=>{
 
-const[value, setValues]=useState(()=>{
+const[values, setValues]=useState(()=>{
     const valueContainer ={}
     for(let field of fields){
         valueContainer[field.label]=''
-    }
 
-    console.log(valueContainer)
+        return valueContainer
+    }
 })
 
- 
-
-
-    return(
+//  console.log(values)
+    return(  
     <>
     <form>
        {
@@ -24,9 +22,12 @@ const[value, setValues]=useState(()=>{
             {field.label}
         </label>
 
-        <input
-         type={field.type}
+        <input  
          id={field.id}
+         type={field.type}
+         value={values[field.label]}
+         onChange={e=> setValues({ ...values, [field.label]: e.target.value})}
+         
         />
         </div>
        )
