@@ -1,4 +1,4 @@
-import Authform from "../auth/pages/Authform"
+import Authform from "./Authform"
 
 const Signup =()=>{
     return(
@@ -15,6 +15,10 @@ fields={[
   },
   {
      label:"Password", 
+    type:"password"
+  },
+  {
+    label:"Confirm Password",
     type:"password"
   }
   

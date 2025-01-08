@@ -1,4 +1,4 @@
-const Authform = ({fields})=>{
+const Authform = ({fields, submitButton})=>{
     return(
     <>
     <form>
@@ -6,19 +6,23 @@ const Authform = ({fields})=>{
        fields.map((field)=>{
 
         <div key={field.id}>
-            
+
         <label htmlFor={field.label}>
             {fields.label}
         </label>
 
         <input
-         type={fields}
-         value={}
-         onChange={}
+         type={field.type}
+         id={field.id}
         />
+
         </div>
        })
        }
+
+       <button>
+        {submitButton}
+       </button>
     </form>
     </>
     )
