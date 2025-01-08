@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import Authform from "./Authform"
 
 const Signup =()=>{
@@ -27,6 +28,8 @@ fields={[
   submitButton="Signup"
 
 />
+
+<Link to="/">already have an account</Link>
         </>
     )
 }

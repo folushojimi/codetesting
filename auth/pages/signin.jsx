@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import Authform from "./Authform"
 
 const Signin =()=>{
@@ -25,6 +26,7 @@ const Signin =()=>{
      submitButton="sign in"
     />
     
+    <Link to="/signup">create an account</Link>
         </>
     )
 }
