@@ -3,10 +3,8 @@ const Fields =(label, type, value, onChange)=>{
     return(
 <>
        <div> 
-        
-         <label htmlFor={label}>
-            {label}
-        </label>
+ 
+          <label htmlFor={label}>{label}</label>
 
          <input 
          id={label}
@@ -14,9 +12,12 @@ const Fields =(label, type, value, onChange)=>{
          value={value}
          onChange={onChange}  
           />
+
       </div>
 </>
     )
+
 }
+  
 
 export default Fields

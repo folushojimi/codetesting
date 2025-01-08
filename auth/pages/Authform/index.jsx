@@ -27,22 +27,17 @@ console.log(values)
       label={field.label}
       type={field.type}
       value={values[field.label]}
-      onChange={e=>
-        {setValues({ ...values, [field.label]: e.target.value});
+      onChange={e=> {setValues({ ...values, [field.label]: e.target.value});
     }}  
     />)
 
      }
-
 
     <button>
      {submitButton}
     </button>
     
     </form>
-   
-
-
 
     </>
     )
