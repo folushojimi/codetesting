@@ -1,4 +1,4 @@
-const  {VITE_API_BASE_URL, VITE_API_KEY} = import.meta.env
+const {VITE_API_BASE_URL, VITE_API_KEY} = import.meta.env
 
 const apiFetch = (method, path, body = null) => {
     const options = {

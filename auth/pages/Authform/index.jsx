@@ -1,19 +1,33 @@
 import { useState } from "react"
 
-const Authform = ({fields,submitButton})=>{
+const Authform = ({fields,submitButton, onSubmit})=>{
 
 const[values, setValues]=useState(()=> {
     const valueContainer = {};
+
     for(let field of fields){
-        valueContainer[field.label]='';
-        return valueContainer
+        valueContainer[field.label]= "";
     }
+
+    return valueContainer
+
 })
 
  console.log(values)
+
+// setting up the spinning loader that rotates whenever we clicked on submit
+const[loading, setloading]=useState(false)
+
     return(  
     <>
-    <form>
+    <form
+    onSubmit={async (e)=>{
+       e.preventDefault();
+       setloading(true)
+       await onSubmit(values)
+       setloading(false)
+    }}
+    >
        {
        fields.map((field)=>
        
@@ -37,17 +51,19 @@ const[values, setValues]=useState(()=> {
         </div>      
         )
 
-       
        )
        }
-
-       <button>
+ 
+       <button style={{padding:"5px", width:"120px", marginTop:"10px",}}>
         {submitButton}
+         {loading && <span style={{marginLeft:"5px", animation:"spin"}}>()</span>}
        </button>
     </form>
     
     </>
     )
+
 }
 
 export default Authform 
+
